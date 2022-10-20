@@ -1,0 +1,69 @@
+<h1 mat-dialog-title>Add User Form</h1>
+<div mat-dialog-content>
+      <form [formGroup]="productForm">
+       <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input formControlName="firstname" matInput placeholder="Name"/>
+       </mat-form-field>
+       <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input formControlName="lastname" matInput placeholder="Name"/>
+ </mat-form-field>
+ <mat-form-field appearance="outline">
+        <mat-label>CIN</mat-label>
+        <input formControlName="cin" matInput placeholder="Name"/>
+ </mat-form-field>
+ <!-- <div class="checkbox" *ngFor="let label of formationss">
+       <div class="col-sm-4">
+         <label>
+           <input type="checkbox" value="{{label.id_formation}}" >
+             {{ label.nom_formation }}</label>
+       </div>   
+     </div> -->
+ <!-- <section class="example-section"  >
+       <h4>Choose an formation</h4>
+       <div *ngFor="let i of formationss "><p><mat-checkbox  formControlName="formations" value="{{i}}">{{i}}</mat-checkbox></p></div>
+      
+ </section> -->
+ <mat-form-field appearance="fill">
+       <mat-label   >Choose an formation</mat-label>
+       <mat-select formControlName="formations" multiple>
+         <mat-option *ngFor="let i of formationss " [value]="i.id_formation">{{i.nom_formation}}</mat-option>
+         <!-- <mat-option value="Formation ASP" >Formation ASP</mat-option>
+         <mat-option value="Formation  WebSite">Formation  WebSite</mat-option> -->
+       </mat-select>
+     </mat-form-field>
+ <div class="example-container">
+       <mat-form-field appearance="fill">
+         <mat-label>Enter your email</mat-label>
+         <input formControlName="mail" matInput placeholder="pat@example.com"  required>
+         <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+       </mat-form-field>
+     </div>
+     <mat-form-field appearance="outline">
+       <mat-label>PassWord</mat-label>
+       <!-- <input formControlName="PassWord" matInput placeholder="Name" [readonly]="true"/> -->
+       <input formControlName="PassWord" matInput placeholder="Name" />
+</mat-form-field>
+ <mat-form-field appearance="outline">
+        <mat-label>Métier</mat-label>
+        <input formControlName="metier" matInput placeholder="Name"/>
+ </mat-form-field>
+
+       
+       
+<!-- <mat-form-field  appearance="fill">
+               <mat-label>Choose a date</mat-label>
+               <input formControlName="date" matInput [matDatepicker]="picker">
+               <mat-hint>MM/DD/YYYY</mat-hint>
+               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+               <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->
+       
+      </form>
+              
+</div>
+<div mat-dialog-action [align]="'end'">
+       <button style= "background-color: rgb(243, 4, 4) ;" mat-raised-button color="warn" mat-dialog-close>Close</button>
+       <button style= "margin-left: 8px ;" mat-raised-button color="primary" (click)="adduser()">{{actionBtn}}</button>
+ </div>

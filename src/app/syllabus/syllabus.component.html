@@ -1,0 +1,67 @@
+
+<main class="ureact-app__main">
+    <div class="title-area">
+        <div class="ureact-app__header">
+            <div>
+                <div>
+                    <div class="_header-content--header--3mdiS shared--outer-container--3eppq">
+                        <div class="_header-content--part-info--3iVwL">
+                            <h1>{{less}}</h1>
+                            <p class="_header-content--part-type--1Fn_- shared--label-regular--31PUI shared--context-label--1Ij2n">Syllabus</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-area" style="background-color: rgb(250, 251, 252);">
+        <div aria-hidden="true" class="hidden-header">
+            <div class="ureact-app__header">
+                <div>
+                    <div>
+                        <div class="_header-content--header--3mdiS shared--outer-container--3eppq">
+                            <div class="_header-content--part-info--3iVwL">
+                                <h1>{{less}}</h1>
+                                <p class="_header-content--part-type--1Fn_- shared--label-regular--31PUI shared--context-label--1Ij2n">Syllabus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="ureact-app__body">
+            <div class="index--container--uI0r1">
+                <div class="index--body--3G2lS">
+                    <div data-test="core-curriculum">
+                        <div class="index--container--2Ai9k shared--outer-container--3eppq">
+                            <div class="index--curriculum-list--2Hsyl shared--card--3X88h">
+                                <div class="index--header--TFwgL">
+                                    <div>
+                                        <h2 class="index--title--1laWv shared--header-small--1fJEM">SYLLABUS</h2>
+                                    </div>
+                                </div>
+                                <ol class="_waypoints--waypoints--1Nos9" *ngFor="let x of chapitres; let i = index" [attr.data-index]="i">
+                                    <li class="_waypoint--waypoint--2cXSk">
+                                        <div class="_waypoint--tag--2sOZX">{{i+1}}</div>
+                                        <div class="_item--item--1Vki7">
+                                            <div class="_item--metadata--3MzRd">
+                                                <h2 class="_item--subtitle--3wwW7 shared--header-meta--19afO">Chapter {{i+1}}</h2>
+                                                <span class="_item--locked-text--18l0g shared--context-label-gray--28jz4 shared--context-label--1Ij2n"></span>
+                                            </div>
+                                            <h3><a [routerLink]="['/chapitre', lesson ,'cours', x]">{{x}}</a></h3>
+                                            <div class="_15vzQlp3FJ8f94suLiPCPf ureact-markdown _item--summary--3NcW1"></div>
+                                            <ul class="_part--projects--1zFWg"></ul>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</main>

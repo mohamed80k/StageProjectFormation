@@ -1,0 +1,189 @@
+
+
+    <div id="app">
+        <div id="main">
+            
+            <div class="content">
+                <div data-test="nanodegree-container">
+                    <div>
+                        <div class="_layout--large-nav--1elMR">
+                            <div class="ureact-app__container">
+                                <nav class="ureact-app__nav secondary-only">
+                                    <a class="nav__a11y-link" href="#content">Jump to content</a>
+                                    <a class="nav__a11y-link" href="mailto:a11y@udacity.com?subject=Accessibility%20Support" rel="noreferrer" target="_blank">Email for accessibility support</a>
+                                    <div class="nav__contents">
+                                        <div id="main-layout-sidebar" class="secondary-nav">
+                                            <div data-test="nanodegree-sidebar" class="index--sidebar-container--WjVqN">
+                                                <div class="index--sidebar-herocolor_scheme1--3PZV7 index--sidebar-hero--1daP_">
+                                                    <div class="index--image--Mpnje">
+                                                        <div class="vds-image-loader vds-image-loader--loading" style="height: 192px; width: 100%;">
+                                                            <img src="" hidden="" />
+                                                            <div class="vds-image-loader__full" style="background-image: url('');"></div>
+                                                        </div>
+                                                    </div>
+                                                    <h4>{{form5}}</h4>
+                                                </div>
+                                                
+                                                <div role="group" aria-expanded="false" class="_section--section--16O72 shared--section--3e1zX _section--_hide-shadow--1363R">
+                                                    <a [routerLink]="['/formation', form5]" class="_section--header--3zXV5 shared--header--3QkFS"><h2>Syllabus</h2></a>
+                                                </div>
+                                                <div class="wrap-collabsible dropdown-btn _section--section--16O72 shared--section--3e1zX _section--_hide-shadow--1363R"> 
+                                                    <input id="collapsible2" class="toggle" type="checkbox" checked="">
+                                                    
+                                                         <label for="collapsible2" class="lbl-toggle _section--header--3zXV5 shared--header--3QkFS"><h2>CORE CURRICULUM</h2> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                                            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                                          </svg>
+                                                            
+                                                         </label>
+                                                    <div class="collapsible-content">
+                                                        <div class="content-inner _item--item-selected--2C0mp _item--details--bRPx_"  *ngFor="let x of parts; let i = index" [attr.data-index]="i" >
+                                                            <a  style="color:whitesmoke ;" [routerLink]="['/part', x]"><span style="font-size:16px; " class="_item--title--3RRb5" >{{x}} </span></a>
+                                            
+                                                        
+                                                        </div>
+                                                    </div>                                
+                                                 </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <main class="ureact-app__main">
+                                    <div class="title-area">
+                                        <div class="ureact-app__header">
+                                            <div>
+                                                <div>
+                                                    <div class="_header-content--header--3mdiS shared--outer-container--3eppq">
+                                                        <div class="_header-content--part-info--3iVwL">
+                                                            <h1>{{part}}</h1>
+                                                            <p class="_header-content--part-type--1Fn_- shared--label-regular--31PUI shared--context-label--1Ij2n">Core Curriculum</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-area" style="background-color: rgb(250, 251, 252);">
+                                        <div aria-hidden="true" class="hidden-header">
+                                            <div class="ureact-app__header">
+                                                <div>
+                                                    <div>
+                                                        <div class="_header-content--header--3mdiS shared--outer-container--3eppq">
+                                                            <div class="_header-content--part-info--3iVwL">
+                                                                <h1>{{part}}</h1>
+                                                                <p class="_header-content--part-type--1Fn_- shared--label-regular--31PUI shared--context-label--1Ij2n">Core Curriculum</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="_header-content--notification-bar--2bUaJ">
+                                                            <div class="deadline-bar--container--djlS_">
+                                                                <div class="deadline-bar--content--X6Lwt shared--outer-container--3eppq">
+                                                                    <p class="deadline-bar--large-info--3EH-W">Proceed to Part 2 to continue learning</p>
+                                                                    <span>
+                                                                        <div class="deadline-bar--inner-content-container--ofeiZ">
+                                                                            <div class="deadline-bar--content-context-label--1mbKu"><h2 class="deadline-bar--title--pN0sH shared--subtitle-small--1lMk2">100% viewed</h2></div>
+                                                                        </div>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="content" class="ureact-app__body">
+                                            <div class="index--container--uI0r1">
+                                                <div class="index--body--3G2lS">
+                                                    <div data-test="part-syllabus" class="_syllabus--container--30zm9 shared--outer-container--3eppq">
+                                                        <ol *ngFor="let item of lessons; let i = index" [attr.data-index]="i">
+                                                            <li>
+                                                                <div>
+                                                                    <div class="index--lesson-card--mwX1V index--card-interactive--1EHiQ shared--card-interactive--2Jtvl shared--card--3X88h">
+                                                                        <a
+                                                                            class="index--curtain--3sKxm shared--curtain--2_FSP"
+                                                                            [routerLink]="['/chapitre',item , 'syllabus']"
+                                                                        >
+                                                                            View
+                                                                        </a>
+                                                                        <div class="index--container--1pEmR">
+                                                                            <span id="lesson-card-scroll-target-19b28cf1-0667-4f51-bdfb-21a4ec2adaa8" class="index--scroll-target--kzi6f"></span>
+                                                                            <div class="_lesson-expanded--lesson-expanded--1F90t _lesson-expanded--_lesson-expanded--12yZy">
+                                                                                <div class="_lesson-expanded--details--2ORBR">
+                                                                                    <div class="_lesson-expanded--text--1jM3p">
+                                                                                        <div class="_lesson-expanded--header--rATlm">
+                                                                                            <div class="_lesson-expanded--tag-container--Fn1Eu"><h3 class="_lesson-expanded--tag--Dx7Iu shared--header-meta--19afO">lesson {{i+1}}</h3></div>
+                                                                                            <h2>{{item}}</h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="_lesson-expanded--actions--KkY9y">
+                                                                                        <div class="_lesson-expanded--action-info--3kCSZ">
+                                                                                            <button [routerLink]="['/chapitre',item , 'syllabus']" class="vds-button vds-button--secondary vds-button--small vds-button__icon vds-button__icon--right" type="button">
+                                                                                                <span class="vds-button__content">
+                                                                                                    View Lesson
+                                                                                                    <i class="vds-icon" role="img" aria-label="arrow right" aria-hidden="false">
+                                                                                                        <svg viewBox="0 0 32 32">
+                                                                                                            <path
+                                                                                                                d="M16.293 7.293a1 1 0 011.414 0l8 8a1 1 0 010 1.414l-8 8a1 1 0 01-1.414-1.414L22.585 17H7a1 1 0 01-.993-.883L6 16a1 1 0 011-1h15.585l-6.292-6.293a1 1 0 01-.083-1.32z"
+                                                                                                            ></path>
+                                                                                                        </svg>
+                                                                                                    </i>
+                                                                                                </span>
+                                                                                            </button>
+                                                                                            
+                                                                                        </div>
+                                                                                        <!-- <span>
+                                                                                            <div class="_lesson-expanded--progress--16Jyl">
+                                                                                                <div class="_progress-bar--progress-bar-container--3ckXh">
+                                                                                                    <div style="width: 80px; height: 4px;" class="_progress-bar--progress-bar--1CyhZ"><div style="width: 100%;" class="_progress-bar--progress-bar-inner--3Aemj"></div></div>
+                                                                                                    <span class="_progress-bar--completion-amount--1Gmbl shared--subtitle-small--1lMk2">100% Viewed</span>
+                                                                                                </div>
+                                                                                                <a class="_lesson-expanded--collapse-card--20QRG shared--subtitle-small--1lMk2" href="#">Shrink Card</a>
+                                                                                            </div>
+                                                                                        </span> -->
+                                                                                        
+                                                                                        
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                                <div class="_lesson-expanded--image-container--SHQCU"><div class="_lesson-expanded--image-placeholder--2SiZ3"></div></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ;
+    </div>
+    <script src="/js/vendors~app.b1f57.js"></script>
+    <script src="/js/app.fc6c4.js"></script>
+    <div
+        id="drift-frame-chat"
+        class="drift-conductor-item drift-frame-chat drift-frame-chat-align-right"
+        style="right: 12px; width: 400px !important; max-width: none; position: fixed; z-index: 2147483647; max-height: 0px; bottom: 88px; visibility: hidden; min-width: 320px; height: calc(100% - 75px) !important; opacity: 0;"
+        aria-hidden="true"
+        tabindex="-1"
+    >
+        <iframe
+            class="drift-frame-chat"
+            scrolling="no"
+            title="Drift Widget Chat Window"
+            allow="autoplay; encrypted-media; fullscreen;"
+            style="background: transparent none repeat scroll 0% 0%; width: 400px !important; max-width: 100%; height: 100%; border: medium none;"
+            src="https://js.driftt.com/core/chat?region=US&amp;driftEnableLog=false&amp;pageLoadStartTime=1661769079226"
+            aria-hidden="true"
+            tabindex="-1"
+            frameborder="0"
+        ></iframe>
+    </div>

@@ -1,0 +1,55 @@
+<!-- <body>
+
+<div class ="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class ="card">
+          <div class="test-center>">
+              <h1>Login</h1>
+              <h3>please entre email && password</h3>
+
+          </div>
+          <form [formGroup] ="loginForm">
+            
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label><br>
+                <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                
+              </div>
+            
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label><br>
+                <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+              </div> 
+              <br>
+              <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+            
+          </form>
+      
+        </div>
+      </div>
+    </div>
+    
+
+</div>
+</body> -->
+
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form [formGroup] ="loginForm">
+        <h3 style="color: black;">Login Here</h3>
+
+        <label style="color: black;" for="exampleInputEmail1" class="form-label" >Username</label>
+        <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+
+        <label style="color: black;" for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+
+        <button type="submit" (click)="login()" style="color:white" >Log In</button>
+        
+    </form>
+</body>
